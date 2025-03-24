@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML - Simple PHP Login page Using Forms</title>
+  </head>
+  <body>
+    <form action="check.php" method="POST">
+      <!-- 1. 'action' attribute's value (check.php) is the back end file where we want to send data -->
+      <!-- 2. 'method' attribute's value (POST) is the method in which we are sending request in back end  -->
+
+      <input type="username" placeholder="Username" name="usernamePHP" /><br />
+      <input type="password" placeholder="Password" name="passwordPHP" /><br />
+      <!-- 3. Inputs inside of a <form> contain the variables we have to send in the back end -->
+      <!-- 4. We access these data in backend by using the attribute 'name' value (in our case 'usernamePHP' and
+       'passwordPHP') as the key to identify received data in back end.
+       PHP example:
+            $username = $_POST["usernamePHP"];
+       View "check.php" file. -->
+      <input type="submit" value="Login" />
+      <!-- 5. It is mportant to remember that the type of login button
+      input must be "submit" in order to submit the form where it belongs to.
+      If the type is "button", the form will not be submitted. -->
+    </form>
+  </body>
+</html>
+
+<!-- 6. Final Note: every time you have to send / receive data, use network tab in your browser.
+ For each request, you may check sub-tabs "request" and "response" to read data you send and response you receive.
+-->
